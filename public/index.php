@@ -10,4 +10,8 @@ $app->get('/', function ($request, $response, $args) {
     return $response;
 });
 
+$app->get('/hello', function ($request, $response, $args) {
+    $response->getBody()->write('Hello from /hello!');
+    return $response;
+});
 $app->run();
